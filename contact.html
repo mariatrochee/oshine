@@ -23,7 +23,7 @@
       <li class="nav-item">
         <a class="nav-link" href="index.html">Home</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="about-us.html">About Us</a>
       </li>
       <li class="nav-item">
@@ -35,8 +35,8 @@
 		<li class="nav-item">
         <a class="nav-link" href="#">Services</a>
       </li>
-		<li class="nav-item">
-        <a class="nav-link" href="#">Contact Us<span class="sr-only">(current)</span></a>
+		<li class="nav-item active">
+        <a class="nav-link" href="contact.html">Contact Us<span class="sr-only">(current)</span></a>
       </li>
     	</ul>
 	  <ul class="navbar-nav ml-auto">
@@ -113,6 +113,13 @@
 		</div>
 	
 	</section>
+	<section id="mapa">
+	<div class="container">
+		<div id="map">
+		
+		</div>
+		</div>
+	</section>
 		<footer>
 		<div class="container">
 			<p> &copy; Copyright 2019 - Oshine | Diseño Web I</p>
@@ -120,7 +127,41 @@
 	</footer>
 		<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false"></script>
+	<script src="js/gmaps.js"></script>
+
+<!-- path gMaps.js -->
+<script>
+$(function () {
+	
+	$(window).load(function(){
+		mostrarMapa();
+	});
+
+	function mostrarMapa(){
+		var map;
+		var mLat = 14.048399; //latitud
+		var mLng = -87.174078; //longitud
+
+		map = new GMaps({
+			div: '#map', //id del <div> donde se mostrará el mapa.
+			lat: mLat,
+			lng: mLng,
+			zoom: 18
+		  });
+		map.addMarker({
+		  lat: mLat,
+		  lng: mLng,
+		  title: 'Nuestra ubicación en gMaps',
+		  infoWindow: {
+			content: '<p>UNITEC - Univ. Tecnológica de Honduras</p>'
+		  }
+		});	
+		
+	}
+});
+</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146926732-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
