@@ -367,6 +367,11 @@ p{
 .navbar-nav .fab:hover{
 	color:#ffffff;
 }
+
+#map{
+	width: 100%;
+	height: 300px;
+}
 footer{
 	padding: 40px 0px;
 	text-align: center;
