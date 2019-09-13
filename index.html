@@ -100,7 +100,7 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 		<h2 class="titulo">Our Recent <a href="#" data-fancybox="" data-src="about-us.html" data-type="iframe">Works.</a></h2>
 		<h5 class="subtitulo">These are some of our more recent and appreciated works by our clients.</h5>
 		<div class="row">
-		<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
+		<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
 			<div class="work">
 				<img src="img/iphone-mockup-2.png" class="img-fluid" alt="oshine-mobile">
 				<div class="work-frame">
@@ -113,7 +113,7 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 			</div>
 			</article>
 		
-			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
+			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
 			<div class="work">
 			<img src="img/work-2.jpg" class="img-fluid" alt="man">
 				<div class="work-bottom">
@@ -122,7 +122,7 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 			</div>
 			</article>
 			
-			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
+			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
 				<div class="work">
 				<img src="img/work-3.jpg" class="img-fluid" alt="oshine-site">
 					<div class="work-frame">
@@ -138,7 +138,7 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 			</div>
 			<br>
 			<div class="row">
-		<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
+		<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.8s">
 			<div class="work">
 				<a href="img/work-4.jpg" data-fancybox="work">
 				<img src="img/work-4.jpg" class="img-fluid" alt="oshine-woman">
@@ -152,7 +152,7 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 			</div>
 			</article>
 		
-			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
+			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="1.0s">
 				<div class="work">
 			<img src="img/work-5.jpg" class="img-fluid" alt="oshine-desktop">
 				<div class="work-frame">
@@ -165,7 +165,7 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 				</div>
 			</article>
 			
-			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
+			<article class="col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="1.2s">
 				<img src="img/work-6.jpg" class="img-fluid" alt="oshine-verne">
 			</article>
 		</div>
@@ -210,7 +210,7 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 	<div class="container">
 	<h2 class="titulo">Testimonials</h2>
 	<h5 class="subtitulo">We are proud of our products and we want you to know, what our cutomers feel about that.</h5>
-		<div class="row">
+		<div class="row app-carousel">
 		<article class="col-md-4 col-sm-12">
 			<div class="testimonials-info">
 			<img src="img/team-4.png" class="img-fluid" alt="testimonio-2">
@@ -256,6 +256,36 @@ integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9
 	<script>new 
 		WOW().init();
 	</script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+
+$(function(){
+
+$(".app-carousel").owlCarousel({
+				items: 1,
+				loop: true,
+				autoplay: true,
+				smartSpeed: 800,
+				margin: 30,
+				center: true,
+				dots: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					480: {
+						items: 3
+					},
+					992: {
+						items: 5
+					}
+				}
+			});
+
+
+});
+
+</script>
 		   
 		   
 	<!-- Global site tag (gtag.js) - Google Analytics -->
